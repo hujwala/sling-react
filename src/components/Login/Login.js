@@ -49,7 +49,7 @@ class Login extends Component{
     required
     onChange={(e) => this.setState({email: e.target.value})}
     value={this.state.email}
-    errorText = {this.state.emailError}
+    //errorText = {this.state.emailError}
     />
     </div>
     </div>
@@ -60,7 +60,7 @@ class Login extends Component{
     required
     onChange={(pwd) => this.setState({password: pwd.target.value})}
     value={this.state.password}
-    errorText = {this.state.passwordError}
+    //errorText = {this.state.passwordError}
     />
     </div>
         <input type="submit" id ="submit-button" value="Login" onClick={(e) => this.signUpBtnPressed(e)}>

@@ -2,10 +2,9 @@ import { browserHistory } from 'react-router';
 import {  SIGNUP_IN_PROCESS,
           SIGNUP_AUTH_SUCESS,
           SIGNUP_AUTH_FAILED } from '../Constant'
-
-
  export const sendingSignUpRequest = (userDict) => {
       return(dispatch) => {
+        debugger;
       dispatch({ type: SIGNUP_IN_PROCESS });
        fetch('https://ums.q.sling.com/v5/sessions',
           {
@@ -15,8 +14,8 @@ import {  SIGNUP_IN_PROCESS,
           },
           body: JSON.stringify(userDict),
           Authorization: {
-            'Consumer Key': '',
-            'Consumer Secret':''
+            'Consumer Key': (process.env.REACT_APP_CONSUMER_KEY),
+            'Consumer Secret': (process.env.REACT_APP_CONSUMER_SECRET)
           },
         }).then((response) => response.json())
           .then((responseJson) => {
