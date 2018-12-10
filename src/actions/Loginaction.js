@@ -27,7 +27,7 @@ import {  SIGNUP_IN_PROCESS,
                  dispatch({
                   type: SIGNUP_AUTH_SUCESS,
                   payload: responseJson
-              }, browserHistory.push('https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId="+vendorId+"#state="+state+"&access_token="+token+"&token_type=Bearer'))
+              }, browserHistory.push("/"))
             }else{
                  dispatch({
                   type: SIGNUP_AUTH_FAILED,
