@@ -19,11 +19,15 @@ import {  SIGNUP_IN_PROCESS,
           },
         }).then((response) => response.json())
           .then((responseJson) => {
+            const { token } = responseJson.token
+            const { state } = process.env.REACT_APP_STATE
+            const { vendorId } = process.env.REACT_APP_VENDORID
+
             if(responseJson.success === true){
                  dispatch({
                   type: SIGNUP_AUTH_SUCESS,
                   payload: responseJson
-              }, browserHistory.push("/"))
+              }, browserHistory.push('https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=${vendorId}#state=${state}&access_token=${handle}&token_type=Bearer'))
             }else{
                  dispatch({
                   type: SIGNUP_AUTH_FAILED,
