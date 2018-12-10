@@ -19,10 +19,6 @@ import {  SIGNUP_IN_PROCESS,
           },
         }).then((response) => response.json())
           .then((responseJson) => {
-            var token = responseJson.token;
-            var state = process.env.REACT_APP_STATE
-            var vendorId = process.env.REACT_APP_VENDORID
-
             if(responseJson.success === true){
                  dispatch({
                   type: SIGNUP_AUTH_SUCESS,
