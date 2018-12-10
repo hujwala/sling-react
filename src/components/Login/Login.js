@@ -44,6 +44,9 @@ class Login extends Component{
     <div className="col-sm-7">
     <div className="form-group">
     <label for="name">Email</label>
+    <label for="name"></label>
+
+    <span>{process.env.REACT_APP_CONSUMER_KEY}</span>
     <input type="text"
     placeholder="Enter Email" name="psw"
     required
