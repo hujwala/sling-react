@@ -3,7 +3,6 @@ import  { connect } from 'react-redux';
 import  { sendingSignUpRequest } from '../../actions/Loginaction';
 
 import './Login.css'
-var cors = require('cors');
 //u have import login , signup ad route
 
 class Login extends Component{
